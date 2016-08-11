@@ -11,6 +11,8 @@ gem 'pg'
 
 gem 'simple_form'
 
+gem 'carrierwave'
+
 gem 'devise', '>= 3.2.4'
 
 # Use SCSS for stylesheets
