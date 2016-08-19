@@ -1,7 +1,9 @@
 Grammable::Application.routes.draw do
   devise_for :users
   root "grams#index"
-  resources :grams, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :grams, only: [:new, :create, :show, :edit, :update, :destroy] do
+    resources :comments, only: :create
+  end
 #  resources :grams --> same as line number 4
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
